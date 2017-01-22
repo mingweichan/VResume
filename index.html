@@ -1,21 +1,38 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>sddfd - A-Frame</title>
-    <meta name="description" content="Hello, World! - A-Frame">
-    <script src="https://aframe.io/releases/0.3.2/aframe.min.js"></script>
-    <script src="https://aframe.io/releases/0.4.0/aframe.js"></script>
- 
 
-  </head>
-  <body>
+<head>
+    <meta charset="utf-8">
+    <title>Ming - VR Resume</title>
+    <meta name="description" content="Hello, World! - A-Frame">
+
+    <script src="https://aframe.io/releases/0.4.0/aframe.js"></script>
+    <script src="script.js"></script>
+
+
+</head>
+
+<body>
     <a-scene stats>
-      <a-box log="Hello World" position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
-      <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
-      <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
-      <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
-      <a-sky color="#ECECEC"></a-sky>
+        <a-assets>
+
+        </a-assets>
+        <a-box log="Hello World" position="2 4 3" rotation="0 45 0" color="#4CC3D9">
+            <a-animation direction="alternate" attribute="position" from="2 3 -5" to="2 4 -8"></a-animation>
+            <a-animation direction="alternate" attribute="position" from="2 4 -8" to="0 4 -8"></a-animation>
+        </a-box>
+        <a-box log="Hello World" position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9">
+            <a-animation direction="alternate" easing="ease-in-out" attribute="material.color" from="white" to="#4CC3D9" dur="500" repeat="indefinite"></a-animation>
+
+
+        </a-box>
+        <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
+        <a-cone position="1 0.75 -3" radius="0.5" height="1" color="#FFC65D">
+            <a-animation direction="alternate" attribute="geometry.radiusTop" from="0" to=".5" dur="3000" repeat="indefinite" easing="ease-in-out"></a-animation>
+        </a-cone>
+        <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
+        <a-sky color="#ECECEC"></a-sky>
     </a-scene>
-  </body>
+</body>
+
 </html>

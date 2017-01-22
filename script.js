@@ -5,3 +5,4 @@ AFRAME.registerComponent('log', {
     console.log(stringToLog);
   }
 });
+
